@@ -1,8 +1,11 @@
 module.exports = {
+  preset: "ts-jest",
+  roots: ['<rootDir>/stacks', '<rootDir>/handlers'],
+  setupFilesAfterEnv: ["jest-sinon"],
   testEnvironment: 'node',
-  roots: ['<rootDir>/test'],
   testMatch: ['**/*.test.ts'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest',
+    "^.+\\.(js|jsx)$": "babel-jest"
   }
 };

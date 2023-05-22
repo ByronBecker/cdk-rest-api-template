@@ -4,3 +4,11 @@
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+false
+*.DS_Store
+
+.vscode
+
+dist
+envars/
